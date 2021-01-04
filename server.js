@@ -5,7 +5,7 @@ const Article = require('./models/article')
 const methodOverride = require('method-override')
 const app = express()
 
-mongoose.connect('mongodb://localhost/blog',{
+mongoose.connect('mongodb+srv://crud20:crud20@crud20.6ck9u.mongodb.net/crud20?retryWrites=true&w=majority',{
     useNewUrlParser:true,useUnifiedTopology:true,useCreateIndex:true
 })
 
