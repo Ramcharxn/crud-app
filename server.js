@@ -5,11 +5,12 @@ const Article = require('./models/article')
 const methodOverride = require('method-override')
 const app = express()
 
-mongoose.connect('mongodb://localhost/blog',{
-    useNewUrlParser:true,useUnifiedTopology:true,useCreateIndex:true
+mongoose.connect('mongodb+srv://crud2:crud2@crud.eybhg.mongodb.net/crud?retryWrites=true&w=majority',{
+    useCreateIndex:true,useNewUrlParser:true,useUnifiedTopology:true,
 })
 
 app.set('view engine','ejs')
+app.set('views',__dirname+'/views')
 app.use(express.urlencoded({extended:false}))
 app.use(methodOverride('_method'))
 
